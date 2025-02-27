@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educracy</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {ef5ff;
+            color: rgb(5, 0, 0);
+            font-family: 'Poppins', Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        
+        h1 {
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            color: #33818d;
+        }
+        
+        img {
+            width: 400px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 1.2em;
+            max-width: 1200px;
+            margin: auto;
+            line-height: 1.6;
+            text-align: left;
+        }
+        
+        .dashboard-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #a4ffba;
+            color: #33818d;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+        
+        .podcast-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #a4ffba;
+            color: #33818d;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        
+        .popup {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #a4ffba;
+            color: black;
+            padding: 20px;
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .popup.show {
+            transform: translateX(0);
+        }
+        
+        .popup h2 {
+            text-align: center;
+        }
+        
+        .popup a {
+            display: block;
+            margin: 10px 0;
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        .popup a:hover {
+            text-decoration: underline;
+        }
+        
+        .close-btn {
+            display: block;
+            text-align: right;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: rgb(0, 0, 0);
+        }
+        
+        .social-bar {
+            width: 100%;
+            height: 10vh;
+            background-color: #a4ffba;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: rgb(4, 4, 4);
+            font-weight: bold;
+            margin-top: 100px;
+            gap: 15px;
+        }
+        
+        .social-bar img {
+            width: 65px;
+            height: 65px;
+            margin: 0;
+        }
+    </style>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById("dashboardPopup");
+            popup.classList.toggle("show");
+        }
+    </script>
+</head>
+<body>
+    <a href="podcast.wav" class="podcast-btn" target="_blank">PODCAST</a>
+    <h1>EDUCRACY</h1>
+    <img src="logo.png" alt="Logo Educracy">
+    <p>
+        <b>Benvenuto in EDUCRACY!</b> 🌍📚<br>
+        Qui esploriamo il legame tra <b>educazione e democrazia</b>, perché solo chi possiede conoscenza può davvero lasciare il segno. Ti aspettano articoli stimolanti, approfondimenti su scuola, diritti e cittadinanza, per capire insieme come l’istruzione costruisca il futuro.<br>
+        Crediamo in un’informazione accessibile a tutti: per questo, troverai <b>un podcast riassuntivo</b>, così che chiunque possa far parte di questo viaggio.<br>
+        <b>Unisciti a noi e diventa protagonista del cambiamento!</b>🚀
+    </p>
+    
+    <button class="dashboard-btn" onclick="togglePopup()">DASHBOARD DELLA CONOSCENZA</button>
+    
+    <div id="dashboardPopup" class="popup">
+        <span class="close-btn" onclick="togglePopup()">&times;</span>
+        <h2>DASHBOARD DELLA CONOSCENZA</h2>
+        <a href="articolo1.html"> <u>DEMOCRAZIA E EDUCAZIONE</u></a>
+        <a href="articolo2.html"> <u>UN LEGAME INDISSOLUBILE</u></a>
+        <a href="articolo3.html"> <u>IL CANTIERE DELLA CONOSCENZA</u></a>
+        <a href="articolo4.html"> <u>L'ISTRUZIONE COME PONTE</u></a>
+        <a href="articolo5.html"> <u>OLTRE IL BANCO</u></a>
+        <a href="articolo6.html"><u> IL NOSTRO SCUDO</u></a>
+        <a href="articolo7.html"><u>LA PAURA DEL FUTURO</u></a>
+    </div>
+    
+    <div class="social-bar">
+        Seguici su INSTAGRAM e facci sapere la tua opinione compilando il nostro modulo di feedback!
+        <a href="https://www.instagram.com/educracy.blog/" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://docs.google.com/forms/d/1xaR9-btutZ8WSkAdse2cSwpZUFG7xHV7XNJGSJ1w8C4/edit"> 
+            <img src="modulo.png" alt="Modulo di contatto">
+        </a>
+    </div>
+</body>
+</html>
